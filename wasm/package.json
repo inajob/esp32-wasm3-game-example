@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "assemblyscript": "0.12.5"
+  },
+  "scripts": {
+    "asbuild:app": "asc assembly/index.ts -b build/app.wasm -t build/app.wat --runtime=half --sourceMap --noAssert -O3z --use abort= && xxd -i build/app.wasm > app.wasm.h",
+    "asbuild": "npm run asbuild:app"
+  },
+  "devDependencies": {
+    "assemblyscript": "^0.12.5"
+  }
+}
